@@ -46,6 +46,9 @@ jobs:
       - name: npm build
         run: npm run build
 
+      - name: ls
+        run: ls -la
+
       - name: Build & Push
         uses: docker/build-push-action@v6
         with:
