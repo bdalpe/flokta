@@ -10,7 +10,7 @@ FROM gcr.io/distroless/nodejs20-debian12
 COPY --from=downloads /tini /bin/tini
 
 WORKDIR /app
-COPY ./dist .
+COPY dist .
 
 ENTRYPOINT ["/bin/tini", "--", "/nodejs/bin/node"]
 CMD ["/app/index.js"]
